@@ -1,0 +1,135 @@
+:root {
+    --primary-blue: #004B98;
+    --dark-blue: #0A2240;
+    --red: #E1261C;
+    --light-blue: #3DB5E6;
+    --gray: #C8C8C8;
+    --white: #FFFFFF;
+    --black: #000000;
+    --radial-gradiant: radial-gradient(circle, rgba(0, 75, 152, 1) 0%, rgba(10, 34, 64, 1) 100%);
+  }
+  .header {
+    padding-top: 3%;
+
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.login{
+    padding-top: 3%;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.login-form{
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center; 
+}
+
+
+.gradient-background{
+    color: white;
+}
+  
+  /* Testing Classes */
+  .black-line {
+    background: black;
+    height: 25px;
+  }
+  
+  /* Bulma Overrides */
+  .columns {
+    margin: 0 !important;
+  }
+  
+  /* Colored Backgrounds */
+  [class*="-background"] {
+    padding: 5% 7.5%;
+  }
+  
+  .blue-background {
+    background: var(--primary-blue);
+    color: var(--white);
+  }
+  
+  .dark-background {
+    background: var(--dark-blue);
+    color: var(--white);
+  }
+  
+  .white-background {
+    background: var(--white);
+    color: var(--black);
+  }
+  
+  .red-background {
+    background: var(--red);
+    color: var(--white);
+  }
+  
+  .gray-background {
+    background: var(--gray);
+    color: var(--black);
+  }
+  
+  .gradient-background {
+    background: rgb(0, 75, 152);
+    background: var(--radial-gradiant);
+  }
+  div[class*=button] {
+    margin: 5% 0;
+  }
+  
+  div[class*=buttons]:hover a i {
+    transition: 150ms all ease-in;
+    margin-left: 10px;
+  }
+  
+  a[class*=black__button] {
+    background-color: #3c4249;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+        
+  }
+
+  a[class*=black__button]:hover {
+    background-color: #ffffff;
+    color: black;
+  }
+ 
+  
+  input[type=button], input[type=submit], input[type=reset] {
+    background-color: #3c4249;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+  
+  a[class*=button] {
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 2% 3%;
+    border-radius: 50px;
+    margin: 0 2% 5% 0;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  a[class*=button]:hover:after {
+    opacity: 0 !important;
+  }
+  
+  @media screen and (min-width: 768px) {
+    div[class*="-background"] {
+      padding: 5% 5%;
+    }
+  }
+  
