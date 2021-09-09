@@ -19,39 +19,43 @@
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
         }
-        
+
         .row {
             display: flex;
             height: fit-content;
         }
-        
-        table,th,td {
-            border-collapse: collapse;
-            border: 1px solid white;
-            margin-left: auto;
-            margin-right: auto;
+
+        table,
+        th,
+        td {
+            border: 2px solid white;
+
         }
+
         table {
+            table-layout:fixed;
             width: 100%;
-            height: 100%;
+            max-height:20px;
             
         }
-        th,td {
-            padding: 50px;
+
+
+        th,
+        td {
+                padding:2%
         }
-         td.used{
+
+        td.used {
             border-color: red;
-            border-width: 5px;
+            border-width: 2px;
         }
-     
-
-
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
+    
 </head>
 
 <body>
@@ -60,71 +64,62 @@
         <div class="row">
             <!--Note use a foreach loop / template litterals to fill td tag-->
             <div class="table__wrapper">
-                <table id= "genreal">
+                <table id="genreal">
                     <!--tr = table row-->
-                    <tr><!--headers-->
+                    <tr>
+                        <!--headers-->
                         <th>B</th>
                         <th>I</th>
                         <th>N</th>
                         <th>G</th>
                         <th>O</th>
                     </tr>
-                    <tr><!--row B-->
-                        <td class = 'box'>talks about drugs (in game)</td>
-                        <td class = 'box'>Someone has sex</td>
-                        <td class = 'box'>Bill Ehmann cameo</td>
-                        <td class = 'box'>Goof goes into normal voice for seroius talk</td>
-                        <td class = 'box'>NEED SOMETHING</td>
+                    <tr>
+                        <!--row B-->
+                        <td class='box'>talks about drugs (in game)</td>
+                        <td class='box'>Someone has sex</td>
+                        <td class='box'>Bill Ehmann cameo</td>
+                        <td class='box'>Goof goes into normal voice for seroius talk</td>
+                        <td class='box'>NEED SOMETHING</td>
                     </tr>
-                    <tr><!--row I-->
-                        <td class = 'box'>NPC Impersonation </td>
-                        <td class = 'box'>Amber Smokes pot</td>
-                        <td class = 'box'> Earl rolls more than 8 dice in a turn</td>
-                        <td class = 'box'>Making fun of inteligence of DM</td>
-                        <td class = 'box'> Big iron is mentioned</td>
+                    <tr>
+                        <!--row I-->
+                        <td class='box'>NPC Impersonation </td>
+                        <td class='box'>Amber Smokes pot</td>
+                        <td class='box'> Earl rolls more than 8 dice in a turn</td>
+                        <td class='box'>Making fun of inteligence of DM</td>
+                        <td class='box'> Big iron is mentioned</td>
                     </tr>
-                    <tr><!--row N-->
-                        <td class = 'box'>Mot starts rambling about infomation gathered</td>
-                        <td class = 'box'>Vel uses shocking grasp</td>
-                        <td class = 'box'>FREE SPACE</td>
-                        <td class = 'box'>Something gets puts into the Quotes channel</td>
-                        <td class = 'box'>goof breaks down something to wake mot up</td>
+                    <tr>
+                        <!--row N-->
+                        <td class='box'>Mot starts rambling about infomation gathered</td>
+                        <td class='box'>Vel uses shocking grasp</td>
+                        <td class='box used'>FREE SPACE</td>
+                        <td class='box'>Something gets puts into the Quotes channel</td>
+                        <td class='box'>goof breaks down something to wake mot up</td>
                     </tr>
-                    <tr><!--row G-->
-                        <td class = 'box'>Kyle says "something my char would know"</td>
-                        <td class = 'box'>SWEET HOME ALABAMA</td>
-                        <td class = 'box'>in game racism</td>
-                        <td class = 'box'>Fin goes fishing</td>
-                        <td class = 'box'> Earl mentioned squeekers</td>
+                    <tr>
+                        <!--row G-->
+                        <td class='box'>Kyle says "something my char would know"</td>
+                        <td class='box'>SWEET HOME ALABAMA</td>
+                        <td class='box'>in game racism</td>
+                        <td class='box'>Fin goes fishing</td>
+                        <td class='box'> Earl mentioned squeekers</td>
                     </tr>
-                    <tr><!--row O-->
-                        <td class = 'box'>joke about forest fire</td>
-                        <td class = 'box'>DM has more than 4 voices</td>
-                        <td class = 'box'>Fin slaps something to death</td>
-                        <td class = 'box'>Someone is late</td>
-                        <td class = 'box'>D20 dice montage </td>
+                    <tr>
+                        <!--row O-->
+                        <td class='box'>joke about forest fire</td>
+                        <td class='box'>DM has more than 4 voices</td>
+                        <td class='box'>Fin slaps something to death</td>
+                        <td class='box'>Someone is late</td>
+                        <td class='box'>D20 dice montage </td>
                     </tr>
                 </table>
             </div>
         </div>
-        
+
     </section>
 
 </body>
 <script src="/insides.js"></script>
-<script>
- 
-
-    if(document.querySelector('.table__wrapper')){
-        let allBoxes = [...document.querySelectorAll('.box')]
-
-        allBoxes.forEach((box) => {
-		box.addEventListener('click', () => {
-            
-			//console.log(getinside());
-            box.classList.toggle('used')
-		})
-	})
-    }
-</script>
-</html>
+< </html>
