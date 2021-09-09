@@ -16,14 +16,10 @@ let allBoxes = [...document.querySelectorAll('.box')]
 var temp = 0;
 
 function fillIndex() {
-    
     while (temp < 25) {
-        
         number = Math.floor(Math.random() * master.length)
         if (usedindex.includes(number) == false) {
-
             usedindex[temp] = number
-            
             temp++ 
         }
     }
@@ -31,25 +27,16 @@ function fillIndex() {
 
 function fillBoard(){
 temp=0
-console.log("im in fill")
     while (temp < 25) {
-        console.log("im in while")
-      
         if(temp == 12){
-            console.log("temp is:", temp)
             allBoxes[temp].innerHTML = "Free Space"
-            
         }
         else{
             allBoxes[temp].innerHTML = master[usedindex[temp]]
-            
         }
         temp++
     }
-
-
 }
-
 if (document.querySelector('.table__wrapper')) {
 
     console.log(allBoxes) //note 12 is the free space
