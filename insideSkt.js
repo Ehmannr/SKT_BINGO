@@ -1,9 +1,9 @@
 const master = [
-    'Talks about drugs ', 'Someone has sex', 'Bill Ehmann cameo', 'Goof goes into normal voice for serious talk', 'NEED SOMETHING',
+    'NEED Something', 'Someone has sex', 'Bill Ehmann cameo', 'Goof goes into normal voice', 'NEED SOMETHING',
 
-    'Need something', 'Vel Smokes pot', 'Earl rolls more than 8 dice in a turn', 'Make fun of DM', 'Big iron is mentioned',
+    'Need something', 'Vel Smokes pot', '8 dice in a turn', 'Make fun of DM', 'Big iron is mentioned',
 
-    'Mot starts rambling', 'Vel uses shocking grasp', 'home is played', 'Something gets puts into the Quotes channel', 'goof breaks down something to wake mot up',
+    'Mot starts rambling', 'Vel uses shocking grasp', 'home is played', 'Something gets puts into the Quotes channel', 'goof wakes mot up',
 
     '"Something my char would know"', 'Someone makes a deal with garfield', 'In game racism', 'Fin goes fishing', 'NEED SOMETHING',
 
@@ -39,7 +39,7 @@ temp=0
 }
 if (document.querySelector('.table__wrapper')) {
 
-    console.log(allBoxes) //note 12 is the free space
+    //console.log(allBoxes) note 12 is the free space
 
     allBoxes.forEach((box) => {
         box.addEventListener('click', () => {

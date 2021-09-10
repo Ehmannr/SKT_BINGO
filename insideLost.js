@@ -41,7 +41,7 @@ temp=0
 }
 if (document.querySelector('.table__wrapper')) {
 
-    console.log(allBoxes) //note 12 is the free space
+    //console.log(allBoxes) note 12 is the free space
 
     allBoxes.forEach((box) => {
         box.addEventListener('click', () => {
