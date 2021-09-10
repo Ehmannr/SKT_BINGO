@@ -56,6 +56,12 @@
     background-image: linear-gradient(to right, rgb(19, 83, 126), rgba(0, 0, 0, 0.726));
     color: white;
   }
+  
+
+  .bad-background{
+    background: rgb(2,0,36);
+background: linear-gradient(147deg, rgba(2,0,36,1) 0%, rgba(18,18,255,1) 35%, rgba(0,212,255,1) 100%);
+  }
 
 
   .row {
@@ -98,7 +104,7 @@ td.used {
     align-items: center;
   }
   
-  a[class *='red_button'] {
+  a[class *='white_button'] {
     padding: 15px 30px;
     font-size: 1.6rem;
     display: inline-block;
