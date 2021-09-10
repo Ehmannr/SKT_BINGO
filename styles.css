@@ -15,33 +15,11 @@
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
-.login{
-    padding-top: 3%;
-    font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-.login-form{
-    font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center; 
-}
 
 .gradient-background{
     color: white;
 }
-  
-  /* Testing Classes */
-  .black-line {
-    background: black;
-    height: 25px;
-  }
-  
-  /* Bulma Overrides */
-  .columns {
-    margin: 0 !important;
-  }
-  
+    
   /* Colored Backgrounds */
   [class*="-background"] {
     padding: 5% 7.5%;
@@ -80,14 +58,37 @@
   .new-background{
     background: #8EB590;
   }
-  div[class*=button] {
-    margin: 5% 0;
-  }
-  
-  div[class*=buttons]:hover a i {
-    transition: 150ms all ease-in;
-    margin-left: 10px;
-  }
+
+
+  .row {
+    display: flex;
+    height: fit-content;
+}
+
+table,
+th,
+td {
+    border: 2px solid white;
+
+}
+
+table {
+    table-layout:fixed;
+    width: 100%;
+    max-height:20px;
+    
+}
+
+
+th,
+td {
+        padding:2%
+}
+
+td.used {
+    border-color: red;
+    border-width: 2px;
+}
   
   a[class*=black__button] {
     background-color: #3c4249;
@@ -99,22 +100,6 @@
     cursor: pointer;
         
   }
-
-  a[class*=black__button]:hover {
-    background-color: #ffffff;
-    color: black;
-  }
- 
-  
-  input[type=button], input[type=submit], input[type=reset] {
-    background-color: #3c4249;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-}
   
   a[class*=button] {
     font-size: 1rem;
@@ -129,6 +114,13 @@
   a[class*=button]:hover:after {
     opacity: 0 !important;
   }
+  a[class *='red_button'] {
+    padding: 15px 30px;
+    font-size: 1rem;
+    display: inline-block;
+    background-color: #EA8459;
+    color: black;
+}
   
   @media screen and (min-width: 768px) {
     div[class*="-background"] {
