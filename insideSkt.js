@@ -7,7 +7,7 @@ const master = [
 
     '"Something my char would know"', 'Someone makes a deal with garfield', 'In game racism', 'Fin goes fishing', 'NEED SOMETHING',
 
-    'jJke about forest fire', 'DM has more than 4 voices', 'Fin slaps something to death', 'Someone is late', 'D20 dice montage'
+    'Joke about forest fire', 'DM has more than 4 voices', 'Fin slaps something to death', 'Someone is late', 'D20 dice montage'
 ];
 //Note please spell check this later since Ryan Wrote this
 
