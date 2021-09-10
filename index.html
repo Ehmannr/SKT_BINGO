@@ -33,93 +33,60 @@
         }
 
         table {
-            table-layout:fixed;
+            table-layout: fixed;
             width: 100%;
-            max-height:20px;
-            
+            max-height: 20px;
+
         }
 
 
         th,
         td {
-                padding:2%
+            padding: 2%
         }
 
         td.used {
             border-color: red;
             border-width: 2px;
         }
+
+        a[class *='red_button'] {
+            padding: 15px 30px;
+            font-size: 1rem;
+            display: inline-block;
+            background-color: #EA8459;
+            color: black;
+        }
+
+        .col {
+  float: left;
+  width: 50%;
+        }
+ 
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
-    
+
 </head>
 
 <body>
-    <section class="gradient-background">
-        <h2 class="header"> STORM KINGS THUNDER BINGO </h2>
-        <div class="row">
-            <!--Note use a foreach loop / template litterals to fill td tag-->
-            <div class="table__wrapper">
-                <table id="genreal">
-                    <!--tr = table row-->
-                    <tr>
-                        <!--headers-->
-                        <th>B</th>
-                        <th>I</th>
-                        <th>N</th>
-                        <th>G</th>
-                        <th>O</th>
-                    </tr>
-                    <tr>
-                        <!--row B-->
-                        <td class='box'>talks about drugs (in game)</td>
-                        <td class='box'>Someone has sex</td>
-                        <td class='box'>Bill Ehmann cameo</td>
-                        <td class='box'>Goof goes into normal voice for seroius talk</td>
-                        <td class='box'>NEED SOMETHING</td>
-                    </tr>
-                    <tr>
-                        <!--row I-->
-                        <td class='box'>NPC Impersonation </td>
-                        <td class='box'>Amber Smokes pot</td>
-                        <td class='box'> Earl rolls more than 8 dice in a turn</td>
-                        <td class='box'>Making fun of inteligence of DM</td>
-                        <td class='box'> Big iron is mentioned</td>
-                    </tr>
-                    <tr>
-                        <!--row N-->
-                        <td class='box'>Mot starts rambling about infomation gathered</td>
-                        <td class='box'>Vel uses shocking grasp</td>
-                        <td class='box used'>FREE SPACE</td>
-                        <td class='box'>Something gets puts into the Quotes channel</td>
-                        <td class='box'>goof breaks down something to wake mot up</td>
-                    </tr>
-                    <tr>
-                        <!--row G-->
-                        <td class='box'>Kyle says "something my char would know"</td>
-                        <td class='box'>SWEET HOME ALABAMA</td>
-                        <td class='box'>in game racism</td>
-                        <td class='box'>Fin goes fishing</td>
-                        <td class='box'> Earl mentioned squeekers</td>
-                    </tr>
-                    <tr>
-                        <!--row O-->
-                        <td class='box'>joke about forest fire</td>
-                        <td class='box'>DM has more than 4 voices</td>
-                        <td class='box'>Fin slaps something to death</td>
-                        <td class='box'>Someone is late</td>
-                        <td class='box'>D20 dice montage </td>
-                    </tr>
-                </table>
-            </div>
+    <section class="new-background" style = "min-height: 200px;">
+        <div class = "col">
+            <h2>SKT </h2>
+            <a href="skt.html" class="red_button "> SKT BINGO Card </a>
         </div>
+        <div class = "col">
+            <h2>LMOP </h2>
+            <a href="lostmine.html" class="red_button "> Lost Mine BINGO Card </a>
+        </div>
+
 
     </section>
 
 </body>
-<script src="/insideskt.js"></script>
-< </html>
+
+
+</html>

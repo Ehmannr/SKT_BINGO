@@ -76,6 +76,10 @@
     background: rgb(0, 75, 152);
     background: var(--radial-gradiant);
   }
+
+  .new-background{
+    background: #8EB590;
+  }
   div[class*=button] {
     margin: 5% 0;
   }
