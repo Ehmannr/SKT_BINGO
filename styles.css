@@ -6,15 +6,12 @@
     --gray: #C8C8C8;
     --white: #FFFFFF;
     --black: #000000;
-    --radial-gradiant: radial-gradient(circle, rgba(0, 75, 152, 1) 0%, rgba(10, 34, 64, 1) 100%);
+    --radial-gradiant: radial-gradient( rgba(0, 75, 152, 1) 0%, rgba(10, 34, 64, 1) 100%);
   }
-  .header {
-    padding-top: 3%;
-
-    font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
+ .header{
+   text-align: center;
+   font-size: 2rem;
+ }
 
 .gradient-background{
     color: white;
@@ -56,8 +53,8 @@
   }
 
   .new-background{
-    background: #D7D9C0;
-    color: #716F80;
+    background-image: linear-gradient(to right, rgb(19, 83, 126), rgba(0, 0, 0, 0.726));
+    color: white;
   }
 
 
@@ -80,7 +77,6 @@ table {
     
 }
 
-
 th,
 td {
         padding:2%
@@ -91,16 +87,6 @@ td.used {
     border-width: 2px;
 }
   
-  a[class*=black__button] {
-    background-color: #3c4249;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-        
-  }
   
   a[class*=button] {
     font-size: 1rem;
@@ -112,20 +98,12 @@ td.used {
     align-items: center;
   }
   
-  a[class*=button]:hover:after {
-    opacity: 0 !important;
-  }
   a[class *='red_button'] {
     padding: 15px 30px;
     font-size: 1.6rem;
     display: inline-block;
-    background-color: #EA8459;
+    background-color:rgb(255, 255, 255);
     color: black;
 }
   
-  @media screen and (min-width: 768px) {
-    div[class*="-background"] {
-      padding: 5% 5%;
-    }
-  }
   
