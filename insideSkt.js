@@ -1,5 +1,5 @@
 const master = [
-    'Talks about drugs ', 'Someone has sex', 'Bill Ehmann cameo', 'Goof goes into normal voice for seroius talk', 'NEED SOMETHING',
+    'Talks about drugs ', 'Someone has sex', 'Bill Ehmann cameo', 'Goof goes into normal voice for serious talk', 'NEED SOMETHING',
 
     'Need something', 'Vel Smokes pot', 'Earl rolls more than 8 dice in a turn', 'Make fun of DM', 'Big iron is mentioned',
 
