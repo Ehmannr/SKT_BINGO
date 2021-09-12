@@ -121,7 +121,7 @@ td.used {
     color: balck;
   }
   .ryan-background{
-    background-image: linear-gradient(170deg, rgb(89, 103, 116) 20%, rgb(0, 0, 0)  , rgb(10, 91, 145)  , rgb(11, 71, 0)  );
+    background-image: linear-gradient(170deg, rgb(89, 103, 116) 20%, rgba(0, 0, 0, 0.767)  , rgb(10, 91, 145)  , rgb(11, 71, 0)  );
     color: white;         
   }
 
