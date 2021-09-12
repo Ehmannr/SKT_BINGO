@@ -1,6 +1,6 @@
 function badBackground() {
 
-    if (document.querySelector('.new-background')) {
+    if (document.querySelector('.orange-background')) {
         var num = Math.floor(Math.random() * 20) + 1
         if (num == 1) {
             document.body.classList.toggle("new-background")
