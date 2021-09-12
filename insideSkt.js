@@ -1,14 +1,16 @@
 const master = [
-    'NEED Something', 'Someone has sex', 'Bill Ehmann cameo', 'Goof goes into normal voice', 'NEED SOMETHING',
+    'More than 50 dmg in a turn', 'Someone has sex', 'Bill Ehmann cameo', 'Goof becomes a gymnastics', 'Someone has golden gulp',
 
-    'Need something', 'Vel Smokes pot', '8 dice in a turn', 'Make fun of DM', 'Big iron is mentioned',
+    'Theft', 'Vel Smokes pot', '8 dice in a turn', 'Make fun of DM', 'Big iron is mentioned',
 
-    'Mot starts rambling', 'Vel uses shocking grasp', 'home is played', 'Something gets puts into the Quotes channel', 'goof wakes mot up',
+    'Mot starts rambling', 'Vel uses shocking grasp', 'Home is played', 'Something gets puts into the Quotes channel', 'Goof wakes mot up',
 
-    '"Something my char would know"', 'Someone makes a deal with garfield', 'In game racism', 'Fin goes fishing', 'NEED SOMETHING',
+    '"Something my char would know"', 'Someone makes a deal with garfield', 'In game racism', 'Fin goes fishing', 'Billy bob begs Earl to unalive',
 
-    'Joke about forest fire', 'DM has more than 4 voices', 'Fin slaps something to death', 'Someone is late', 'D20 dice montage'
+    'Joke about forest fire', 'DM has more than 4 voices', 'Fin slaps something to death', 'Someone is late', 'D20 dice montage',
+    //'Fill in later', 'Fill in later','Fill in later','Fill in later','Fill in later',
 ];
+//'Fill in later', 'Fill in later','Fill in later','Fill in later','Fill in later',
 //Note please spell check this later since Ryan Wrote this
 
 var usedindex = []
@@ -37,6 +39,18 @@ temp=0
         temp++
     }
 }
+
+function changeBorder(color){
+    if (document.querySelector('.table__wrapper')){
+        document.querySelector('.table__wrapper').classList.toggle(color)
+    }
+    //console.log("im in")
+    allBoxes.forEach((box) => {
+            box.classList.toggle(color) 
+               
+    })
+}
+
 if (document.querySelector('.table__wrapper')) {
 
     //console.log(allBoxes) note 12 is the free space
@@ -52,6 +66,7 @@ if (document.querySelector('.table__wrapper')) {
 }
 fillIndex()
 fillBoard()
+changeBorder('black_border')
 
 
 

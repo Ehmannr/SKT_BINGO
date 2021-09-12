@@ -39,6 +39,16 @@ temp=0
         temp++
     }
 }
+
+function changeBorder(){
+    console.log("im in")
+    allBoxes.forEach((box) => {
+            box.classList.toggle('black_border') 
+               
+    })
+}
+
+
 if (document.querySelector('.table__wrapper')) {
 
     //console.log(allBoxes) note 12 is the free space
@@ -54,19 +64,8 @@ if (document.querySelector('.table__wrapper')) {
 }
 
 //this is just for fun 
-function badBackground(){
-
-    if (document.querySelector('.new-background')) {
-        var num = Math.floor(Math.random() * 50)+1
-        if( num==1){
-            document.body.classList.toggle("new-background")
-        document.body.classList.toggle("bad-background")
-        document.querySelector('#bingo').innerHTML = "I hope you enjoy this Jimmy"
-        }
-       
-    }
-}
 
 
+changeBorder()
 fillIndex()
 fillBoard()
