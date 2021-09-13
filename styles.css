@@ -35,7 +35,7 @@
 
   
   .orange-background{
-    background-image: linear-gradient(to right, rgba(197, 131, 51, 0.623), rgba(0, 0, 0, 0.747));
+    background: linear-gradient(to left, rgb( 82,56 , 59), rgb( 214,61 , 64), rgba(236, 85, 51, 0.767));
     color: black;
   }
   
