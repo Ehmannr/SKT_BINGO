@@ -159,5 +159,12 @@ td.used {
     height: 40px;
     
   }
-  /*-------------------------------------------------------------------------------*/
+  /*----------------------------------mobile css media stuff---------------------------------------------*/
+
+  @media only screen and (max-width: 714px) {
+    
+    body {
+       background-color: lightblue !important ;
+    }
+  }
  
