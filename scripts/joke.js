@@ -15,6 +15,8 @@ function badBackground() {
 function forcedBackground(newbackground,oldbackground) {
     document.querySelector('#card__wrapper').classList.toggle(oldbackground)
     document.querySelector('#card__wrapper').classList.toggle(newbackground)
+    
+    
 }
 
 

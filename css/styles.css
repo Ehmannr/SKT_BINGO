@@ -183,17 +183,24 @@ a[class *='refresh_button'] {
 
 }
 
+.divider{
+  width: 0;
+  height:0;
+  border-top: 12vh solid rgb(10, 91, 145);
+  border-left: 100vw solid  var(--gray);
+}
+
 /*----------------------------------tablet? css media stuff---------------------------------------------*/
 
 @media only screen and (max-width: 714px) {
   h1 h2 h3 {
-    font-size: .5rem;
+    font-size: .8rem;
 
   }
 
   #bingo {
     margin-bottom: 20%;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 
   a[class*=button] {
@@ -216,7 +223,7 @@ a[class *='refresh_button'] {
   }
 
   body {
-    background: #08aef0;
+   background: linear-gradient(to right, rgba(90, 212, 116, 0.884), rgba(36, 40, 236, 0.76));;
   }
 
  .box{
