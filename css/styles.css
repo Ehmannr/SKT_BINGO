@@ -25,7 +25,7 @@
 /* Colored Backgrounds */
 [class*="-background"] {
   padding: 5%;
-  
+
 }
 
 .black-background {
@@ -88,6 +88,9 @@ table {
   margin-top: 10%;
 }
 
+#bingo {
+  margin-bottom: 7%;
+}
 
 th,
 td {
@@ -112,6 +115,12 @@ a[class*=button] {
 
 a[class *='white_button'] {
   font-size: 1.2rem;
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+a[class *='refresh_button'] {
+  font-size: 1rem;
   background-color: rgb(255, 255, 255);
   color: black;
 }
@@ -182,6 +191,7 @@ a[class *='white_button'] {
   }
 
   #bingo {
+    margin-bottom: 20%;
     font-size: 1.4rem;
   }
 
@@ -201,6 +211,21 @@ a[class *='white_button'] {
 
   body {
     background: #08aef0;
+  }
+
+  th td {
+    padding: 2%;
+    font-size: .7rem;
+  }
+
+  .header {
+    font-size: 1.5rem;
+  }
+
+  a[class *='refresh_button'] {
+    font-size: .75rem;
+    background-color: rgb(255, 255, 255);
+    color: black;
   }
 
 }
