@@ -1,13 +1,16 @@
+* { 
+  margin: 0; padding: 0; box-sizing: border-box;
+ }
+
 :root {
-    --primary-blue: #004B98;
-    --dark-blue: #0A2240;
-    --red: #E1261C;
-    --light-blue: #3DB5E6;
-    --gray: #C8C8C8;
+   
+    --light-blue: #08aef0;
+    --gray: #d1cdcd;
     --white: #FFFFFF;
     --black: #000000;
-    --radial-gradiant: radial-gradient( rgba(0, 75, 152, 1) 0%, rgba(10, 34, 64, 1) 100%);
+    
   }
+  
  .header{
    text-align: center;
    font-size: 2rem;
@@ -26,11 +29,6 @@
   .blue-background {
     background-image: linear-gradient(170deg, rgb(89, 103, 116) 20% , rgb(10, 91, 145)    );
     color: white;
-  }
-  
-  .dark-background {
-    background: var(--dark-blue);
-    color: var(--white);
   }
 
   
@@ -54,11 +52,6 @@
     color: var(--black);
   }
   
-  .gradient-background {
-    background: rgb(0, 75, 152);
-    background: var(--radial-gradiant);
-  }
-
 
 
   .row {
@@ -80,6 +73,12 @@ table {
     max-height:20px;
     
 }
+.col {
+  float: left;
+  width: 50%;
+  margin-top: 10%;
+        }
+       
 
 th,
 td {
@@ -102,9 +101,7 @@ td.used {
   }
   
   a[class *='white_button'] {
-    padding: 15px 30px;
-    font-size: 1.6rem;
-    display: inline-block;
+    font-size: 1.2rem;
     background-color:rgb(255, 255, 255);
     color: black;
 }
@@ -162,9 +159,30 @@ td.used {
   /*----------------------------------mobile css media stuff---------------------------------------------*/
 
   @media only screen and (max-width: 714px) {
-    
-    body {
-       background-color: lightblue !important;
+    h1 h2 h3 {
+      font-size: .5rem;
+
     }
+    #bingo{
+      font-size: 1.4rem;
+    }
+
+    a[class*=button] {
+      font-size: 1rem;
+      text-decoration: none;
+      padding: 2% 3%;
+      border-radius: 50px;
+      margin: 0 2% 5% 0;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .col {
+      width: 100%;
+    }
+       body{
+         background: #08aef0;
+       }    
+  
   }
  
