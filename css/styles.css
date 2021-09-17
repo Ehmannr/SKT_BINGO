@@ -95,6 +95,7 @@ table {
 th,
 td {
   padding: 2%
+  
 }
 
 td.used {
@@ -213,10 +214,9 @@ a[class *='refresh_button'] {
     background: #08aef0;
   }
 
-  th td {
-    padding: 2%;
-    font-size: .7rem;
-  }
+ .box{
+   font-size: .75rem;
+ }
 
   .header {
     font-size: 1.5rem;
@@ -227,5 +227,51 @@ a[class *='refresh_button'] {
     background-color: rgb(255, 255, 255);
     color: black;
   }
+
+}
+/*----------------------------------mobile css media stuff---------------------------------------------*/
+
+@media only screen and (max-width: 500px) {
+ 
+
+  #bingo {
+    margin-bottom: 20%;
+    font-size: 1rem;
+  }
+
+  a[class*=button] {
+    font-size: .5rem;
+    text-decoration: none;
+    padding: 2% 3%;
+    border-radius: 50px;
+    margin: 0 2% 5% 0;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  a[class *='refresh_button'] {
+    font-size: .5rem;
+    background-color: rgb(255, 255, 255);
+    color: black;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  body {
+    background: black;
+  }
+
+ 
+  .box{
+    font-size: .5rem;
+  }
+
+  .header {
+    font-size: 1rem;
+  }
+
+  
 
 }
