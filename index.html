@@ -4,6 +4,29 @@
 <head>
     <style>
 
+.triangle::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 101%;
+    width: 50%;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+
+.triangle::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 101%;
+    width: 50%;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+/* Controls Root CSS Colors */
+
 
     </style>
     <meta charset="UTF-8">
@@ -16,8 +39,8 @@
 
 
 <body>
-    <div class="orange-background" style="text-align: center; ">
-        <div>
+    <div id = 'main_wrapper' class="blue-background" style="text-align: center; ">
+        <div >
             <h1 id='bingo'>BINGO BONGO TIME</h1>
 
             <a href="boards/skt.html" class="white_button "> SKT BINGO Card </a>
@@ -26,7 +49,10 @@
         </div>
 
     </div>
-    
+    <div class = ' divider triangle blue-lightGray'> 
+        <!--Divider-->
+    </div>
+
     <div class="blue-background">
         <h2>Honestly Idk what to put</h2>
     </div>

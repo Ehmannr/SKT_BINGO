@@ -183,13 +183,6 @@ a[class *='refresh_button'] {
 
 }
 
-.divider{
-  width: 0;
-  height:0;
-  border-top: 12vh solid rgb(10, 91, 145);
-  border-left: 100vw solid  var(--gray);
-}
-
 /*----------------------------------tablet? css media stuff---------------------------------------------*/
 
 @media only screen and (max-width: 714px) {
