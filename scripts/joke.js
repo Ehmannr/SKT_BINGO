@@ -12,10 +12,9 @@ function badBackground() {
     console.log(num)
 }
 
-function forcedBackground(newbackground) {
-    document.body.classList.toggle("blue-background")
-    document.body.classList.toggle(newbackground)
-
+function forcedBackground(newbackground,oldbackground) {
+    document.querySelector('#card__wrapper').classList.toggle(oldbackground)
+    document.querySelector('#card__wrapper').classList.toggle(newbackground)
 }
 
 

@@ -1,95 +1,190 @@
-* { 
-  margin: 0; padding: 0; box-sizing: border-box;
- }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 :root {
-   
-    --light-blue: #08aef0;
-    --gray: #d1cdcd;
-    --white: #FFFFFF;
-    --black: #000000;
-    
-  }
-  
- .header{
-   text-align: center;
-   font-size: 2rem;
- }
 
-.gradient-background{
-    color: white;
+  --light-blue: #08aef0;
+  --gray: #d1cdcd;
+  --white: #FFFFFF;
+  --black: #000000;
+
 }
-    
-  /* Colored Backgrounds */
-  [class*="-background"] {
-    padding:5% ;
-    overflow: hidden;
-  }
-  
-  .blue-background {
-    background-image: linear-gradient(170deg, rgb(89, 103, 116) 20% , rgb(10, 91, 145)    );
-    color: white;
-  }
 
+.header {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.gradient-background {
+  color: white;
+}
+
+/* Colored Backgrounds */
+[class*="-background"] {
+  padding: 5%;
   
-  .orange-background{
-    background: linear-gradient(to left, rgb( 82,56 , 59), rgb( 214,61 , 64), rgba(236, 85, 51, 0.767));
-    color: black;
-  }
-  
-  .white-background {
-    background: var(--white);
-    color: var(--black);
-  }
-  
-  .red-background {
-    background: var(--red);
-    color: var(--white);
-  }
-  
-  .gray-background {
-    background: var(--gray);
-    color: var(--black);
-  }
-  
+}
+
+.black-background {
+  background-color: black;
+  color: white;
+}
+
+.blue-background {
+  background-image: linear-gradient(170deg, rgb(89, 103, 116) 20%, rgb(10, 91, 145));
+  color: white;
+}
 
 
-  .row {
-    display: flex;
-    height: fit-content;
+.orange-background {
+  background: linear-gradient(to left, rgb(82, 56, 59), rgb(214, 61, 64), rgba(236, 85, 51, 0.767));
+  color: black;
+}
+
+.white-background {
+  background: var(--white);
+  color: var(--black);
+
+}
+
+.red-background {
+  background: var(--red);
+  color: var(--white);
+}
+
+.gray-background {
+  background: var(--gray);
+  color: var(--black);
+}
+
+
+
+.row {
+  display: flex;
+  height: fit-content;
 }
 
 .black_border {
-    border: 2px solid black;
-
+  border: 2px solid black;
 }
+
 .white_border {
   border: 2px solid rgb(255, 255, 255);
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  max-height: 20px;
 
 }
-table {
-    table-layout:fixed;
-    width: 100%;
-    max-height:20px;
-    
-}
+
 .col {
   float: left;
   width: 50%;
   margin-top: 10%;
-        }
-       
+}
+
 
 th,
 td {
-        padding:2%}
+  padding: 2%
+}
 
 td.used {
-    border-color: red;
-    border-width: 2px;
+  border-color: red;
+  border-width: 2px;
 }
-  
-  
+
+
+a[class*=button] {
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 2% 3%;
+  border-radius: 50px;
+  margin: 0 2% 5% 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+a[class *='white_button'] {
+  font-size: 1.2rem;
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+/*---- fun backgrounds*/
+.bad-background {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(147deg, rgba(2, 0, 36, 1) 0%, rgba(18, 18, 255, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  color: #ff0000
+}
+
+.joe-background {
+  background-image: linear-gradient(45deg, rgba(40, 148, 42, 0.822), rgb(148, 40, 146));
+  color: balck;
+}
+
+.ryan-background {
+  background: linear-gradient(to right, rgba(228, 110, 31, 0.884), rgba(105, 2, 100, 0.76));
+  color: rgb(255, 255, 255);
+}
+
+.amber-background {
+  background: linear-gradient(147deg, rgba(90, 1, 255, 0.63), rgb(10, 91, 145));
+  color: silver;
+}
+
+#bad_button {
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+
+}
+
+#joe_button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+
+}
+
+#ryan_button {
+  position: relative;
+  float: right;
+  width: 40px;
+  height: 40px;
+
+
+}
+
+#amber_button {
+  position: absolute;
+  top: 0;
+  left: auto;
+  width: 40px;
+  height: 40px;
+
+}
+
+/*----------------------------------mobile css media stuff---------------------------------------------*/
+
+@media only screen and (max-width: 714px) {
+  h1 h2 h3 {
+    font-size: .5rem;
+
+  }
+
+  #bingo {
+    font-size: 1.4rem;
+  }
+
   a[class*=button] {
     font-size: 1rem;
     text-decoration: none;
@@ -99,90 +194,13 @@ td.used {
     display: inline-flex;
     align-items: center;
   }
-  
-  a[class *='white_button'] {
-    font-size: 1.2rem;
-    background-color:rgb(255, 255, 255);
-    color: black;
+
+  .col {
+    width: 100%;
+  }
+
+  body {
+    background: #08aef0;
+  }
+
 }
-  /*---- fun backgrounds*/
-  .bad-background{
-    background: rgb(2,0,36);
-    background: linear-gradient(147deg, rgba(2,0,36,1) 0%, rgba(18,18,255,1) 35%, rgba(0,212,255,1) 100%);
-    color:#ff0000
-  }
-
-  .joe-background {
-    background-image: linear-gradient(45deg, rgba(40, 148, 42, 0.822), rgb(148, 40, 146));
-    color: balck;
-  }
-  .ryan-background{
-    background: linear-gradient(0deg, rgba(228, 110, 31, 0.884),rgba(105, 2, 100, 0.76)   );
-    color: rgb(255, 255, 255);         
-  }
-  .amber-background{
-    background: linear-gradient(147deg, rgba(90, 1, 255, 0.63)  , rgb(10, 91, 145)  );
-    color: silver; 
-  }
-
-  #bad_button{
-
-    position:absolute;
-     top:0;
-     right:0;
-     width: 40px;
-     height: 40px;
-     
-  }
-  #joe_button{
-    position:absolute;
-    width: 40px;
-    height: 40px;
-    
-  }
-  #ryan_button{
-    position:relative;
-    float:right;
-    width: 40px;
-    height: 40px;
-    
- 
-  }
-  #amber_button{
-    position:absolute;
-    top:0;
-    left:auto;
-    width: 40px;
-    height: 40px;
-    
-  }
-  /*----------------------------------mobile css media stuff---------------------------------------------*/
-
-  @media only screen and (max-width: 714px) {
-    h1 h2 h3 {
-      font-size: .5rem;
-
-    }
-    #bingo{
-      font-size: 1.4rem;
-    }
-
-    a[class*=button] {
-      font-size: 1rem;
-      text-decoration: none;
-      padding: 2% 3%;
-      border-radius: 50px;
-      margin: 0 2% 5% 0;
-      display: inline-flex;
-      align-items: center;
-    }
-
-    .col {
-      width: 100%;
-    }
-       body{
-         background: #08aef0;
-       }    
-  
-  }
- 
