@@ -67,7 +67,7 @@ if (document.querySelector('.table__wrapper')) {
 }
 fillIndex()
 fillBoard()
-changeBorder('black_border')
+
 
 
 

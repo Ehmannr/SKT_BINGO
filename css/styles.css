@@ -14,8 +14,12 @@
 }
 
 .header {
-  text-align: center;
+  
+  padding:4%;
   font-size: 2rem;
+}
+.indent{
+  margin-left: 5%;
 }
 
 .gradient-background {
@@ -73,7 +77,7 @@
 }
 
 .black_border {
-  border: 2px solid black;
+  border: 2px solid rgb(0, 0, 0);
 }
 
 .white_border {
@@ -94,13 +98,16 @@ table {
 }
 
 #bingo {
-  margin-bottom: 7%;
+  padding: 10%;
+ min-height: 100vh;
+ min-width: 100vw;
+ 
 }
 
 th,
 td {
   padding: 2%
-  
+ 
 }
 
 td.used {
@@ -122,6 +129,12 @@ a[class*=button] {
 a[class *='white_button'] {
   font-size: 1.2rem;
   background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+a[class *='orange_button'] {
+  font-size: 1.2rem;
+  background-color: rgb(253, 163, 89);
   color: black;
 }
 
@@ -152,6 +165,42 @@ a[class *='refresh_button'] {
   background: linear-gradient(147deg, rgba(90, 1, 255, 0.63), rgb(10, 91, 145));
   color: silver;
 }
+
+.viper-background{
+  background-image: url('/Files/ViperBG.jpg');
+  color:#FFFFFF;
+  padding: 10%;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+.lightning-background{
+  background-image: url('/Files/lightningBG.jpg');
+  min-height: 100vh;
+  border-color: #d1cdcd;
+  min-width: 100vw;
+}
+.codeBG{
+ 
+  background-image: url('/Files/codeBG.jpg');
+  min-height: 50vh;
+  min-width: 100vw;
+}
+
+.lines-background::before {
+	content: " ";
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 10%;
+	height: 1%;
+	background-image: url(https://www.etown.edu/etcsandbox/kyle-test/images/images-cca/homepage-news-lineart.png);
+	background-size: cover;
+	background-position: center;
+	opacity: .3;
+}
+
+
+
 
 #bad_button {
 
