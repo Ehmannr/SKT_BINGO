@@ -38,6 +38,11 @@
   color: white;
 }
 
+.green-background {
+  background-image: linear-gradient(170deg, rgb(54, 189, 27) , rgb(0, 0, 0));
+  color: white;
+}
+
 
 .orange-background {
   background: linear-gradient(to left, rgb(82, 56, 59), rgb(214, 61, 64), rgba(236, 85, 51, 0.767));
