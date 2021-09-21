@@ -1,5 +1,5 @@
 const master = [
-    'More than 50 dmg in a turn', 'Someone has sex', 'Bill Ehmann cameo', 'Goof becomes a gymnastics', 'Someone has golden gulp',
+    'More than 50 dmg in a turn', 'Someone has sex', 'Other parents cameo', 'Goof becomes a gymnastics', 'Someone has golden gulp',
 
     'Theft', 'Vel Smokes pot', '8 dice in a turn', 'Make fun of DM', 'Big iron is mentioned',
 
@@ -8,7 +8,8 @@ const master = [
     '"Something my char would know"', 'Someone makes a deal with garfield', 'In game racism', 'Fin goes fishing', 'Billy bob begs Earl to unalive',
 
     'Joke about forest fire', 'DM has more than 4 voices', 'Fin slaps something to death', 'Someone is late', 'D20 dice montage',
-    //'Fill in later', 'Fill in later','Fill in later','Fill in later','Fill in later',
+
+    'Janet Ehmann Cameo', 'Last week we didnt play','Gambling',//'Fill in later','Fill in later',
 ];
 //'Fill in later', 'Fill in later','Fill in later','Fill in later','Fill in later',
 //Note please spell check this later since Ryan Wrote this
