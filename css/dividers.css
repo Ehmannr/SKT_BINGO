@@ -1,7 +1,7 @@
 
 .divider {
     position: relative;
-    height: 10vh;
+    height: 7vh;
     width: 100vw;
   }
   
@@ -59,6 +59,7 @@
     div[class*="-lightGray"]::after {
     background-color: var(--lightGray);
     }
+
     /* Triangle Shaped Divider */
   .triangle::before {
       content: '';
