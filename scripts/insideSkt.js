@@ -7,7 +7,7 @@ const master = [
 
     '"Something my char would know"', 'Someone makes a deal with garfield', 'In game racism', 'Fin goes fishing', 'Billy bob begs Earl to unalive',
 
-    'Joke about forest fire', 'DM has more than 4 voices', 'Fin slaps something to death', 'Someone is late', 'D20 dice montage',
+    'Joke about forest fire', 'DM messes up a voice', 'Fin slaps something to death', 'Someone is late', 'D20 dice montage',
 
     'Janet Ehmann Cameo', 'Last week we didnt play','Gambling','You roll Nat 1','You roll a nat 20',
 
@@ -43,7 +43,16 @@ temp=0
         temp++
     }
 }
+var audio = document.getElementById("myAudio"); 
+    
+function play() { 
+    audio.play(); 
+} 
 
+function pause() { 
+    audio.pause(); 
+} 
+  
 function changeBorder(color){
     if (document.querySelector('.table__wrapper')){
         document.querySelector('.table__wrapper').classList.toggle(color)
@@ -63,6 +72,7 @@ if (document.querySelector('.table__wrapper')) {
         box.addEventListener('click', () => {
             box.classList.toggle('used')
             //allBoxes[12].innerHTML = "i cant belive this works"
+            checkBoard()
             
         })
     })
@@ -72,6 +82,38 @@ fillIndex()
 fillBoard()
 
 
+function checkBoard(){
+    //  0   1  2    3   4
+    if(allBoxes[0].classList.contains('used')&& allBoxes[1].classList.contains('used') && allBoxes[2].classList.contains('used') && allBoxes[3].classList.contains('used') && allBoxes[4].classList.contains('used')){
+        play();
+    }
+    //  5   6   7   8   9
+    if(allBoxes[5].classList.contains('used')&& allBoxes[6].classList.contains('used') && allBoxes[7].classList.contains('used') && allBoxes[8].classList.contains('used') && allBoxes[9].classList.contains('used')){
+        play();
+    }
+    //  10  11  12  13  14
+    if(allBoxes[10].classList.contains('used')&& allBoxes[11].classList.contains('used') && allBoxes[12].classList.contains('used') && allBoxes[13].classList.contains('used') && allBoxes[14].classList.contains('used')){
+        
+        play()
+    }
+    //  15  16  17  18  19
+    if(allBoxes[15].classList.contains('used')&& allBoxes[16].classList.contains('used') && allBoxes[17].classList.contains('used') && allBoxes[18].classList.contains('used') && allBoxes[19].classList.contains('used')){
+        play();
+    }
+    //  20  21  22  23  24
+    if(allBoxes[20].classList.contains('used')&& allBoxes[21].classList.contains('used') && allBoxes[22].classList.contains('used') && allBoxes[23].classList.contains('used') && allBoxes[24].classList.contains('used')){
+        play();
+        }
+    //  0   6   12  18  24
+    if(allBoxes[0].classList.contains('used')&& allBoxes[6].classList.contains('used') && allBoxes[12].classList.contains('used') && allBoxes[18].classList.contains('used') && allBoxes[24].classList.contains('used')){
+        play();
+    }
+    //  4   8   12  16  20
+    if(allBoxes[4].classList.contains('used')&& allBoxes[8].classList.contains('used') && allBoxes[12].classList.contains('used') && allBoxes[16].classList.contains('used') && allBoxes[20].classList.contains('used')){
+        play();
+    }
 
+}
 
+  
 
