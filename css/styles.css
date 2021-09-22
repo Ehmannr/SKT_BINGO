@@ -113,6 +113,7 @@ td {
 td.used {
   border-color: red;
   border-width: 2px;
+  background-color: #0000008c;
 }
 
 
@@ -177,16 +178,16 @@ a[class *='refresh_button'] {
   background-image: url('/Files/lightningBG.jpg');
   min-height: 100vh;
   border-color: #d1cdcd;
-  min-width: 100vw;
+  color:white;
+  
 }
 .codeBG{
- 
   background-image: url('/Files/codeBG.jpg');
   min-height: 50vh;
   min-width: 100vw;
 }
 
-.lines-background::before {
+.lightning-background::before {
 	content: " ";
 	position: absolute;
 	top: 0%;
