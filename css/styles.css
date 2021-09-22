@@ -5,7 +5,10 @@
 }
 
 :root {
-
+  --red: rgba(255, 0, 0, 0.308);
+  --yellow:rgba(255, 255, 0, 0.568);
+  --green:rgba(6, 223, 6, 0.623);
+  --purp:rgba(155, 67, 255, 0.637);
   --light-blue: #08aef0;
   --gray: #d1cdcd;
   --white: #FFFFFF;
@@ -13,6 +16,19 @@
 
 }
 
+/* Disco background */
+  .red-bg{
+    background-color: var(--red) ;
+  }
+  .yellow-bg{
+    background-color: var(--yellow) ;
+  }
+  .greenDisco-bg{
+    background-color: var(--green) ;
+  }
+  .purp-bg{
+    background-color: var(--purp);
+  }
 .header {
   
   padding:4%;
@@ -187,19 +203,14 @@ a[class *='refresh_button'] {
   min-width: 100vw;
 }
 
-.lightning-background::before {
-	content: " ";
-	position: absolute;
-	top: 0%;
-	left: 0%;
-	width: 10%;
-	height: 1%;
-	background-image: url(https://www.etown.edu/etcsandbox/kyle-test/images/images-cca/homepage-news-lineart.png);
-	background-size: cover;
-	background-position: center;
-	opacity: .3;
+.DISCO{
+  background-image: url('disco.gif');
+  background-repeat: repeat;
+    min-height: 100vh;
+  border-color: black;
+  color: black;
+  
 }
-
 
 
 
