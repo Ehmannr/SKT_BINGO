@@ -46,7 +46,7 @@ var audio = document.getElementById("myAudio");
 
 function play() {
     audio.play();
-    audio.volume = 0.1;
+    audio.volume = 0.05;
 }
 
 function pause() {
