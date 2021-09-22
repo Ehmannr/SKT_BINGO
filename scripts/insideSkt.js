@@ -86,31 +86,37 @@ function checkBoard(){
     //  0   1  2    3   4
     if(allBoxes[0].classList.contains('used')&& allBoxes[1].classList.contains('used') && allBoxes[2].classList.contains('used') && allBoxes[3].classList.contains('used') && allBoxes[4].classList.contains('used')){
         play();
+        confetti.start()
     }
     //  5   6   7   8   9
     if(allBoxes[5].classList.contains('used')&& allBoxes[6].classList.contains('used') && allBoxes[7].classList.contains('used') && allBoxes[8].classList.contains('used') && allBoxes[9].classList.contains('used')){
         play();
+        confetti.start()
     }
     //  10  11  12  13  14
     if(allBoxes[10].classList.contains('used')&& allBoxes[11].classList.contains('used') && allBoxes[12].classList.contains('used') && allBoxes[13].classList.contains('used') && allBoxes[14].classList.contains('used')){
-        
+        confetti.start()
         play()
     }
     //  15  16  17  18  19
     if(allBoxes[15].classList.contains('used')&& allBoxes[16].classList.contains('used') && allBoxes[17].classList.contains('used') && allBoxes[18].classList.contains('used') && allBoxes[19].classList.contains('used')){
         play();
+        confetti.start()
     }
     //  20  21  22  23  24
     if(allBoxes[20].classList.contains('used')&& allBoxes[21].classList.contains('used') && allBoxes[22].classList.contains('used') && allBoxes[23].classList.contains('used') && allBoxes[24].classList.contains('used')){
         play();
+        confetti.start()
         }
     //  0   6   12  18  24
     if(allBoxes[0].classList.contains('used')&& allBoxes[6].classList.contains('used') && allBoxes[12].classList.contains('used') && allBoxes[18].classList.contains('used') && allBoxes[24].classList.contains('used')){
         play();
+        confetti.start()
     }
     //  4   8   12  16  20
     if(allBoxes[4].classList.contains('used')&& allBoxes[8].classList.contains('used') && allBoxes[12].classList.contains('used') && allBoxes[16].classList.contains('used') && allBoxes[20].classList.contains('used')){
         play();
+        confetti.start()
     }
 
 }
