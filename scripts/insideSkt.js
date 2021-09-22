@@ -1,7 +1,7 @@
 const master = [
     'More than 50 dmg in a turn', 'Someone has sex', 'Other parents cameo', 'Goof becomes a gymnastics', 'Someone has golden gulp',
 
-    'Theft', 'Vel Smokes pot', '8 dice in a turn', 'Make fun of DM', 'Big iron is mentioned',
+    'Theft', 'Vel Smokes pot', '8 dice in a turn', 'Make fun of DM', 'You get crit',
 
     'Mot starts rambling', 'Vel uses shocking grasp', 'Home is played', 'Something gets puts into the Quotes channel', 'Goof wakes mot up',
 
