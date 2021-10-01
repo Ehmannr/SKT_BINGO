@@ -157,7 +157,7 @@ function checkBoard() {
 
     index = Math.floor(Math.random() * 24)
     colorInt = Math.floor(Math.random() * 4)+1
-    /console.log(colorInt)
+    //console.log(colorInt)
 
     switch (colorInt) {
         case 1:
