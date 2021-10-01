@@ -42,11 +42,11 @@ function fillBoard() {
         temp++
     }
 }
-var audio = document.getElementById("myAudio");
+
 
 function play() {
     audio.play();
-    audio.volume = 0.05;
+    audio.volume = .07;
 }
 
 function pause() {
@@ -134,10 +134,15 @@ function checkBoard() {
     }
 }
 
-function BINGOBONGOTIME() {
+ function BINGOBONGOTIME() {
 
     clearUsed()
-    play();
+    
+   audio = pickASong()
+   play()
+   
+    
+   
    window.setInterval(DiscoTime, 1000)
     confetti.start()
     document.querySelector('#card__wrapper').classList.toggle('lightning-background')
@@ -146,13 +151,13 @@ function BINGOBONGOTIME() {
 
 }
 
-function DiscoTime() {
+ function DiscoTime() {
 
    
 
     index = Math.floor(Math.random() * 24)
     colorInt = Math.floor(Math.random() * 4)+1
-    console.log(colorInt)
+    /console.log(colorInt)
 
     switch (colorInt) {
         case 1:
@@ -170,9 +175,34 @@ function DiscoTime() {
     }
 }
 
+ 
+function pickASong(){
 
+    songChoise = Math.floor(Math.random() * 3)+1
+    console.log(songChoise)
 
+switch (songChoise) {
+        case 1: //CHYHN
+            var audio = document.getElementById("myAudio2");
+            
+        
+        return audio;
+            
+        case 2:
+            var audio = document.getElementById("myAudio");
+           
+            
+            
+            return audio;
+          
+        case 3:
+            var audio = document.getElementById("myAudio3");
 
+            return audio;
+            
+       
+    }
+}
 
 
 
