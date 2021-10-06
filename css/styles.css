@@ -162,9 +162,9 @@ a[class *='orange_button'] {
 }
 
 a[class *='refresh_button'] {
-  font-size: 1rem;
-  background-color: rgb(255, 255, 255);
-  color: black;
+  font-size: 1.2rem;
+  background-color: rgb(99, 27, 233);
+  color: rgb(0, 0, 0);
 }
 
 /*---- fun backgrounds*/
@@ -205,8 +205,8 @@ a[class *='refresh_button'] {
 }
 .codeBG{
   background-image: url('/Files/codeBG.jpg');
-  min-height: 50vh;
-  min-width: 100vw;
+  min-height: 100%;
+ 
 }
 
 .DISCO{
