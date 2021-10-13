@@ -59,7 +59,7 @@
 }
 
 .green-background {
-  background-image: linear-gradient(170deg, rgb(54, 189, 27) , rgb(0, 0, 0));
+  background-image: linear-gradient(170deg, #87D0AC 40% , #ac87d0);
   color: white;
 }
 
@@ -155,15 +155,15 @@ a[class *='white_button'] {
   color: black;
 }
 
-a[class *='orange_button'] {
+a[class *='white_button'] {
   font-size: 1.2rem;
-  background-color: rgb(253, 163, 89);
+  background-color: rgb(255, 255, 255);
   color: black;
 }
 
-a[class *='refresh_button'] {
+a[class *='purp_button'] {
   font-size: 1.2rem;
-  background-color: rgb(144, 99, 228);
+  background-color: #ac87d0;
   color: rgb(0, 0, 0);
 }
 
