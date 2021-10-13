@@ -2,10 +2,10 @@ function badBackground() {
 
     if (document.querySelector('#bingo')) {
         var num = Math.floor(Math.random() * 20) + 1
+      
         if (num== 1) {
-            document.body.classList.toggle("new-background")
-            document.body.classList.toggle("bad-background")
-            document.querySelector('#main_wrapper').classList.toggle("bad-background")
+            document.querySelector('#bingo').classList.toggle("green-background")
+            document.querySelector('#bingo').classList.toggle("bad-background")
             document.querySelector('#bingo').innerHTML = "I hope you enjoy this Jimmy"
         }
 
