@@ -110,6 +110,7 @@ table {
   margin-left: 12.5%;
   width: 75%;
   text-align: center;
+  background-color: #00000088;
   box-shadow: 0px 0px  50px var(--gray);
   color:var(--gray)
 }
