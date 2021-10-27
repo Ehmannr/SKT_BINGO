@@ -205,7 +205,9 @@ a[class *='purp_button'] {
   min-width: 100vw;
 }
 .lightning-background{
+  
   background-image: url('/Files/lightningBG.jpg');
+  background-repeat:no-repeat;
   min-height: 100vh;
   color:white;
   
