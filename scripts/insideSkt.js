@@ -55,14 +55,13 @@ function pause() {
 }
 
 function changeBorder(color) {
-    if (document.querySelector('.table__wrapper')) {
-        document.querySelector('.table__wrapper').classList.toggle(color)
-    }
+   
     //console.log("im in")
     allBoxes.forEach((box) => {
         box.classList.toggle(color)
-
+        allBoxes[12].classList.toggle(color)
     })
+    
 }
 
 if (document.querySelector('.table__wrapper')) {
@@ -72,7 +71,9 @@ if (document.querySelector('.table__wrapper')) {
     allBoxes.forEach((box) => {
         box.addEventListener('click', () => {
             box.classList.toggle('used')
+            box.classList.toggle('white_border')
             checkBoard()
+            
 
         })
     })

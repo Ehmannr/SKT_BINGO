@@ -97,7 +97,12 @@
 }
 
 .white_border {
-  border: 2px solid rgb(255, 255, 255);
+  outline: 2px solid rgb(255, 255, 255);
+}
+.white_border:hover{
+  outline-offset: 4px;
+  font-size: 1.1rem;
+  font-weight: 200;
 }
 
 table {
@@ -112,7 +117,7 @@ table {
   text-align: center;
   background-color: #00000088;
   box-shadow: 0px 0px  50px var(--gray);
-  color:var(--gray)
+  
 }
 
 .col {
@@ -123,9 +128,8 @@ table {
 
 #bingo {
   padding: 10%;
- min-height: 100vh;
+ min-height: 125vh;
  min-width: 100vw;
- 
 }
 
 th,td{
@@ -134,9 +138,9 @@ th,td{
 }
 
 
-td.used {
-  border-color: red;
-  border-width: 2px;
+.used {
+  outline: 2px solid rgb(255, 0, 0);
+  outline-offset: -2px;
   background-color: #0000008c;
 }
 
@@ -203,7 +207,6 @@ a[class *='purp_button'] {
 .lightning-background{
   background-image: url('/Files/lightningBG.jpg');
   min-height: 100vh;
-  border-color: #d1cdcd;
   color:white;
   
 }
@@ -213,7 +216,7 @@ a[class *='purp_button'] {
 .DISCO{
   background-image: url("disco.gif");
   background-repeat: repeat;
-    min-height: 100vh;
+    min-height: 125vh;
   border-color: black;
   color: black;
   
