@@ -104,6 +104,9 @@
   cursor: pointer;
   
 }
+.used:hover{
+  cursor: pointer;
+}
 
 table {
   table-layout: fixed;
