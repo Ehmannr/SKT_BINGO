@@ -99,6 +99,11 @@
 .white_border {
   outline: 2px solid rgb(255, 255, 255);
 }
+.white_border:hover{
+  outline-offset: 4px;
+  
+  
+}
 
 table {
   table-layout: fixed;
