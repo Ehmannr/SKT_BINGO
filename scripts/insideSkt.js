@@ -210,6 +210,7 @@ function clearUsed() {
     while (temp < 25) {
         if (allBoxes[temp].classList.contains('used')) {
             allBoxes[temp].classList.toggle('used');
+            allBoxes[temp].classList.toggle('white_border');
             //console.log(temp)
         }
         temp++
