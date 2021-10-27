@@ -101,7 +101,7 @@
 }
 .white_border:hover{
   outline-offset: 4px;
-  
+  cursor: pointer;
   
 }
 
