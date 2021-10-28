@@ -215,7 +215,10 @@ a[class *='purp_button'] {
   color:white;
   
 }
-
+.lost-background{
+  background-color:rgba(36, 214, 113, 0.74);
+  color:rgb(243, 220, 245);
+}
 
 
 .DISCO{
@@ -226,7 +229,14 @@ a[class *='purp_button'] {
   color: black;
   
 }
-
+.DISCO-lost{
+  background-image: url("dancetillyourdead.gif");
+  background-repeat: repeat;
+    min-height: 125vh;
+  border-color: black;
+  color: black;
+  
+}
 
 
 #bad_button {

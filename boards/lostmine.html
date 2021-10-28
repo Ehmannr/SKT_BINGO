@@ -3,22 +3,34 @@
 
 <head>
     <style>
-        
+        .link__wrapper {
+            text-align: center;
+            font-size: .7rem;
+        }
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Document</title>
-    
+    <link rel="stylesheet" href="../css/styles.css">
+   
+    <title>Storm King's Thunder</title>
+
 </head>
 
-<body class="blue-background">
-    
-        <h2 class="header"> <a href="../index.html" class="refresh_button "> Back to Main</a>Lost Mines <a href="lostmine.html" class="white_button "> Refresh Card</a> </h2></h2>
+<body>
+    <div id="card__wrapper" class=" lost-background " style="text-align: center;">
+        <h1>
+            <a href="../index.html" class="purp_button " style="margin: 0 2% 5%;"> Back to Main</a>
+
+
+           FROST MAIDEN'S RIME BINGO
+
+            <a href="/boards/lostmine.html" class="purp_button" style="margin: 0 2% 5%;"> Refresh Card</a>
+        </h1>
+
         <div class="row">
             <!--Note use a foreach loop / template litterals to fill td tag-->
-            <div class="table__wrapper  black_border" >
+            <div class="table__wrapper">
                 <table id="genreal">
                     <!--tr = table row-->
                     <tr>
@@ -31,50 +43,95 @@
                     </tr>
                     <tr>
                         <!--row B-->
-                        <td class='box'>    </td>
-                        <td class='box'>    </td>
-                        <td class='box'>    </td>
-                        <td class='box'>    </td>
-                        <td class='box'>    </td>
+                        <td class='box'> </td>
+                        <td class='box'> </td>
+                        <td class='box'> </td>
+                        <td class='box'> </td>
+                        <td class='box'> </td>
                     </tr>
                     <tr>
                         <!--row I-->
-                        <td class='box'>    </td>
-                        <td class='box'>    </td>
-                        <td class='box'>    </td>
-                        <td class='box'>    </td>
-                        <td class='box'>    </td>
+                        <td class='box'> </td>
+                        <td class='box'> </td>
+                        <td class='box'> </td>
+                        <td class='box'> </td>
+                        <td class='box'> </td>
                     </tr>
                     <tr>
                         <!--row N-->
-                        <td class='box'>    </td>
-                        <td class='box'>    </td>
+                        <td class='box'> </td>
+                        <td class='box'> </td>
                         <td class='box used'>FREE SPACE</td>
-                        <td class='box'>    </td>
-                        <td class='box'>    </td>
+                        <td class='box'> </td>
+                        <td class='box'> </td>
                     </tr>
                     <tr>
                         <!--row G-->
-                        <td class='box'>    </td>
-                        <td class='box'>    </td>
-                        <td class='box'>    </td>
-                        <td class='box'>    </td>
-                        <td class='box'>    </td>
+                        <td class='box'> </td>
+                        <td class='box'> </td>
+                        <td class='box'> </td>
+                        <td class='box'> </td>
+                        <td class='box'> </td>
                     </tr>
                     <tr>
                         <!--row O-->
-                        <td class='box'>    </td>
-                        <td class='box'>    </td>
-                        <td class='box'>    </td>
-                        <td class='box'>    </td>
-                        <td class='box'>    </td>
+                        <td class='box'> </td>
+                        <td class='box'> </td>
+                        <td class='box'> </td>
+                        <td class='box'> </td>
+                        <td class='box'> </td>
                     </tr>
                 </table>
             </div>
         </div>
 
-   
+        
+    </div>
+
+    
+    <audio loop volume id="myAudio2">
+        <source src="..\Files\crystal.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="green-background">
+
+        <div class="link__wrapper">
+
+           
+            <a class="white_button" href="https://imagizer.imageshack.com/a/img921/4420/JAdOSP.jpg" target="_blank">
+                <h2>World Map</h2>
+            </a>
+            
+            <br>
+           
+            
+
+
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+
 
 </body>
-<script src="/scripts/insideLost.js"></script>
+
+<script src="../scripts/insideLost.js"></script>
+<script src="../scripts/joke.js"></script>
+<script src="https://www.wpromotions.eu/confetti.min.js"></script>
+
+
+<script>
+
+</script>
+
+<script>
+    changeBorder('white_border')
+</script>
+
 </html>
