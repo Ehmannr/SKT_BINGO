@@ -9,7 +9,9 @@ const master = [
 
     'Joke about forest fire', 'DM messes up a voice', 'Fin slaps something to death', 'Someone is late', 'D20 dice montage',
 
-    'Janet Ehmann Cameo', 'Last week we didnt play', 'Gambling', 'You roll Nat 1', 'You roll a nat 20',
+    'Janet Ehmann Cameo', 'Last week we didnt play', 'Gambling', 'You roll Nat 1', 'You roll a nat 20', 
+
+    'Cant do math', //'Fill in later', 'Fill in later','Fill in later','Fill in later',
 
     //'Fill in later', 'Fill in later','Fill in later','Fill in later','Fill in later',
 ];
