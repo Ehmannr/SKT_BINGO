@@ -1,17 +1,22 @@
 const master = [
-    'More than 50 dmg in a turn', 'Someone has sex', 'Other parents cameo', 'Goof becomes a gymnastics', 'Someone has golden gulp',
+    'More than 50 dmg in a turn', //'Fill in later',
+
+    , 'Other parents cameo', 'Goof becomes a gymnast', 'Someone has golden gulp',
 
     'Theft', 'Vel Smokes pot', '8 dice in a turn', 'Make fun of DM', 'You get crit',
 
     'Mot starts rambling', 'Vel uses shocking grasp', 'Home is played', 'Something gets puts into the Quotes channel', 'Goof wakes mot up',
 
-    '"Something my char would know"', 'Someone makes a deal with garfield', 'In game racism', 'Fin goes fishing', 'Billy bob begs Earl to unalive',
+    '"Something my char would know"', 'Someone makes a deal with garfield', //'In game racism', 
+    
+    'Fin goes fishing', 'Billy bob begs Earl to unalive',
 
     'Joke about forest fire', 'DM messes up a voice', 'Fin slaps something to death', 'Someone is late', 'D20 dice montage',
 
     'Janet Ehmann Cameo', 'Last week we didnt play', 'Gambling', 'You roll Nat 1', 'You roll a nat 20', 
 
-    'Cant do math', //'Fill in later', 'Fill in later','Fill in later','Fill in later',
+    'Cant do math',
+     //'Fill in later', 'Fill in later','Fill in later','Fill in later',
 
     //'Fill in later', 'Fill in later','Fill in later','Fill in later','Fill in later',
 ];
