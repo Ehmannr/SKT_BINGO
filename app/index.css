@@ -1,0 +1,108 @@
+/* ~~~~~~~~~~~~~~~~~~~ */
+/*       Base Styles      */
+/* ~~~~~~~~~~~~~~~~~~~ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #BEC5AD;
+    --secondary: #A4B494;
+    --tertiary: #525e65;
+    --accent: #519872;
+    --text: #363537;
+}
+
+a,ul,li,p {
+    font-family: "Josefin Sans",sans-serif;
+    line-height: 1.55rem;
+    letter-spacing: 1.3px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Josefin Sans",sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.14em;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.25;
+    margin: 2rem 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~ */
+/*       Header        */
+/* ~~~~~~~~~~~~~~~~~~~ */
+
+#nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 20rem;
+    z-index: 999;
+    background-color: #525e65;
+    text-align: center;
+    /*      small after glow under grey nav      */
+    box-shadow: 0 7px 20px 0 rgba(255, 255, 255, 0.253), 0 4px 10px 0 rgba(255, 255, 255, 0.397);
+    
+}
+
+.nav-list{
+    position: relative;
+    display: inline-block;
+    margin :10px;
+}
+
+.nav-list-link {
+    text-decoration: none;
+    color:#DBE8D4;
+    display: inline-block;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~ */
+/*    Header Extras    */
+/* ~~~~~~~~~~~~~~~~~~~ */
+
+.nav-list-link:hover{
+    color: var(--accent);
+}
+
+.nav-list-link::after{
+    content: "";
+    position: absolute;
+   display:block;
+   height:3px;
+   width: 100%;
+   background: #519872;
+  
+}
+
+/* ~~~~~~~~~~~~~~~~~~~ */
+/*        Intro        */
+/* ~~~~~~~~~~~~~~~~~~~ */
+#main__wrapper{
+    background:var(--primary);
+    color:var(--text);
+    background:var(--primary);
+    height: 200vh;
+    width: 100vw;
+    align-items: center;
+    text-align: center;
+   
+}
+#intro{
+    padding: 3% 20%;
+}
+#name-card{
+    
+    
+}
+#major{
+ 
+}
+
+/* ~~~~~~~~~~~~~~~~~~~ */
+/*     Experience       */
+/* ~~~~~~~~~~~~~~~~~~~ */
