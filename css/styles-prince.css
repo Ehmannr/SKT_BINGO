@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --red: rgba(255, 0, 0, 0.308);
+    --yellow:rgba(255, 255, 0, 0.568);
+    --green:rgba(6, 223, 6, 0.623);
+    --purp:rgba(155, 67, 255, 0.637);
+    --light-blue: #08aef0;
+    --gray: #d1cdcd;
+    --white: #FFFFFF;
+    --black: #000000;
+  
+  }
+  
+  /* Disco background */
+    .red-bg{
+      background-color: var(--red) ;
+    }
+    .yellow-bg{
+      background-color: var(--yellow) ;
+    }
+    .greenDisco-bg{
+      background-color: var(--green) ;
+    }
+    .purp-bg{
+      background-color: var(--purp);
+    }
+  .header {
+    
+    padding:4%;
+    font-size: 2rem;
+  }
+  .indent{
+    margin-left: 5%;
+  }
+  
+  .gradient-background {
+    color: white;
+  }
+  
+  /* Colored Backgrounds */
+  [class*="-background"] {
+    padding: 5%;
+  
+  }
+  
+  .black-background {
+    background-color: black;
+    color: white;
+  }
+  
+  .blue-background {
+    background-image: linear-gradient(170deg, rgb(89, 103, 116) 20%, rgb(10, 91, 145));
+    color: white;
+  }
+  
+  .green-background {
+    background-image: linear-gradient(170deg, #87D0AC 40% , #ac87d0);
+    color: white;
+  }
+  
+  
+  .orange-background {
+    background: linear-gradient(to left, rgb(82, 56, 59), rgb(214, 61, 64), rgba(236, 85, 51, 0.767));
+    color: black;
+  }
+  
+  .white-background {
+    background: var(--white);
+    color: var(--black);
+  
+  }
+  
+  .red-background {
+    background: var(--red);
+    color: var(--white);
+  }
+  
+  .gray-background {
+    background: var(--gray);
+    color: var(--black);
+  }
+  
+  
+  
+  .row {
+    display: flex;
+    height: fit-content;
+  }
+  
+  .black_border {
+    border: 2px solid rgb(0, 0, 0);
+  }
+  
+  .white_border {
+    outline: 2px solid rgb(255, 255, 255);
+  }
+  .white_border:hover{
+    outline-offset: 4px;
+    cursor: pointer;
+    
+  }
+  .used:hover{
+    cursor: pointer;
+  }
+  
+  table {
+    table-layout: fixed;
+    width: 100%;
+    max-height: 20px;
+  
+  }
+  .table__wrapper{
+    margin-left: 12.5%;
+    width: 75%;
+    text-align: center;
+    background-color: #00000088;
+    box-shadow: 0px 0px  50px var(--gray);
+    
+  }
+  
+  .col {
+    float: left;
+    width: 50%;
+    margin-top: 10%;
+  }
+  
+  #bingo {
+    padding: 10%;
+   min-height: 125vh;
+   min-width: 100vw;
+  }
+  
+  th,td{
+    padding: 3.6%
+   
+  }
+  
+  
+  .used {
+    outline: 2px solid rgb(255, 0, 0);
+    outline-offset: -2px;
+    background-color: #0000008c;
+  }
+  
+  
+  a[class*=button] {
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 2% 3%;
+    border-radius: 50px;
+    margin: 0 2% 5% 0;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  a[class *='white_button'] {
+    font-size: 1.2rem;
+    background-color: rgb(255, 255, 255);
+    color: black;
+  }
+  
+  a[class *='white_button'] {
+    font-size: 1.2rem;
+    background-color: rgb(255, 255, 255);
+    color: black;
+  }
+  
+  a[class *='purp_button'] {
+    font-size: 1.2rem;
+    background-color: #e2e4c5;
+    color: rgb(0, 0, 0);
+  }
+  
+  
+  
+  .lost-background{
+    background-color:rgba(14, 122, 59, 0.74);
+    color:rgb(243, 220, 245);
+  }
+  
+  
+  .DISCO-lost{
+    background-image: url("dancetillyourdead.gif");
+    background-repeat: repeat;
+      min-height: 125vh;
+    border-color: black;
+    color: black;
+    
+  }
+  
+  

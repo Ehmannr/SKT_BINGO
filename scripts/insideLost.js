@@ -1,9 +1,9 @@
 const master = [
-    'fill in later','fill in later','fill in later','fill in later','fill in later',
+    'Someone is high','You roll a nat 20','You get crit','You roll Nat 1','Something gets puts into the Quotes channel',
 
-    'fill in later','fill in later','fill in later','fill in later','fill in later',
+    'Cant do math','In game racism','8 dice in a turn','Arashi get final hit','Monster is one-shot',
 
-    'fill in later','fill in later','Free Space','fill in later','fill in later',
+    'Someone does recap','fill in later','Fill in later','fill in later','fill in later',
 
     'fill in later','fill in later','fill in later','fill in later','fill in later',
 
@@ -44,7 +44,7 @@ function fillBoard() {
 
 function play() {
     audio.play();
-    audio.volume = .1;
+    audio.volume = .5;
 }
 
 function pause() {
