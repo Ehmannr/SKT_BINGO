@@ -9,8 +9,6 @@ body {
   margin: auto auto;
   text-align: center;
   width: 80%;
-  background-color: rgb(101, 109, 117);
-  color: azure;
 }
 
 img {
@@ -29,4 +27,9 @@ img {
 
 body > section {
   margin-bottom: 20px;
+}
+
+body{
+  background-color: rgb(62, 93, 107);
+  color: rgb(255, 240, 240);
 }

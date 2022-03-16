@@ -8,7 +8,7 @@
 
   const BASE_URL = "https://www.thecocktaildb.com/api/json/v1/1/";
   var cocktailName;
-  window.addEventListener("load", init);
+  
 
   /**
    * TODO: What do we need to initialize?
@@ -38,15 +38,7 @@
     } else {
       url += "random.php"
     }
-
-    //.then(showCocktail)
-
-
     getdata(url)
-
-
-
-
     //make a fetch request to https://www.thecocktaildb.com/api/json/v1/1/random.php
   }
 
@@ -65,9 +57,9 @@
       strDrinkThumb
     } = data.drinks[0]
 
-    
     console.log("GETTING DATA FOR", cocktailName ,"...")
     var parent = document.getElementById('child')
+
     //make img
     var img = document.createElement('img')
     img.src = strDrinkThumb
@@ -82,6 +74,9 @@
     child = document.createElement('p')
     child.innerHTML = strInstructions
     parent.appendChild(child)
+
+    //make the ing list
+    makeList(data.drinks[0],parent)
   }
 
 
@@ -105,11 +100,42 @@
    
     }
   }
+
   function btnHit(){
     cocktailName = undefined;
     makeRequest()
   }
 
+  function  makeList(data,parent){
+    console.log(data)
+    var ul = document.createElement('ul')
+    parent.appendChild(ul)
+    
+
+    let i = 1
+    let l = 1
+    let ingredient = "strIngredient" +i
+    let mesurement = "strMeasure" + l
+      while(data[ingredient]){
+        let child = document.createElement('li')
+
+        if(data[mesurement]){
+          child.innerHTML = data[ingredient] + " : " + data[mesurement]
+        }
+        else{
+          child.innerHTML = data[ingredient]
+        }
+        ul.appendChild(child)
+
+        mesurement = "strMeasure" + ++l
+        ingredient = "strIngredient" + ++i
+        
+
+      }
+      
+    
+  
+  }
   /* ------------------------------ Helper Functions below ------------------------------ */
 
   /**
