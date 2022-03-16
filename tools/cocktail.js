@@ -8,7 +8,7 @@
 
   const BASE_URL = "https://www.thecocktaildb.com/api/json/v1/1/";
   var cocktailName;
-  
+  window.addEventListener("load", init);
 
   /**
    * TODO: What do we need to initialize?
