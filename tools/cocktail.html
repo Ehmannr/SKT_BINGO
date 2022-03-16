@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+  CS310
+  Cocktails
+
+  A webpage for displaying cocktails directions for different cocktails a user can select.
+-->
+<html>
+
+<head>
+  <title>Cocktail</title>
+  <link href="cocktail.css" rel="stylesheet" />
+  <script src="cocktail.js"></script>
+</head>
+
+<body>
+  <section>
+    <header>
+      <h1>Cocktails!</h1>
+    </header>
+
+    <p>
+      <label><input type="radio" name="cocktail" value="old fashioned" />Old Fashioned</label>
+      <label><input type="radio" name="cocktail" value="negroni" />Negroni</label>
+      <label><input type="radio" name="cocktail" value="whiskey sour" />Whiskey Sour</label>
+      <label><input type="radio" name="cocktail" value="daiquiri" />Daiquiri</label>
+      <label><input type="radio" name="cocktail" value="manhattan" />Manhattan</label>
+    </p>
+
+    <p>
+      <button id="btn-random">Pick one for me!</button>
+    </p>
+
+    <!-- insert the cocktail content here -->
+    <section id="cocktail-area">
+      <div id = "child">
+
+      </div>
+      
+    </section>
+  </section>
+</body>
+
+</html>
