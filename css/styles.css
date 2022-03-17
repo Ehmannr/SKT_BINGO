@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* I should really clean this up at some point 3/17/22 */
 :root {
   --red: rgba(255, 0, 0, 0.308);
   --yellow:rgba(255, 255, 0, 0.568);
@@ -271,100 +271,5 @@ a[class *='purp_button'] {
   left: auto;
   width: 40px;
   height: 40px;
-
-}
-
-
-/*----------------------------------tablet? css media stuff---------------------------------------------*/
-
-@media only screen and (max-width: 714px) {
-  h1 h2 h3 {
-    font-size: .8rem;
-
-  }
-
-  #bingo {
-    margin-bottom: 20%;
-    font-size: 1.8rem;
-  }
-
-  a[class*=button] {
-    font-size: 1rem;
-    text-decoration: none;
-    padding: 2% 3%;
-    border-radius: 50px;
-    margin: 0 2% 5% 0;
-    display: inline-flex;
-    align-items: center;
-  }
-
-  a[class *='refresh_button'] {
-    font-size: .75rem;
-    background-color: rgb(255, 255, 255);
-    color: black;
-  }
-  .col {
-    width: 100%;
-  }
-
-  body {
-   background: linear-gradient(to right, rgba(90, 212, 116, 0.884), rgba(36, 40, 236, 0.76));;
-  }
-
- .box{
-   font-size: .75rem;
- }
-
-  .header {
-    font-size: 1.5rem;
-  }
-
-  
-
-}
-/*----------------------------------phone css media stuff---------------------------------------------*/
-
-@media only screen and (max-width: 500px) {
- 
-
-  #bingo {
-    margin-bottom: 20%;
-    font-size: 1.8rem;
-  }
-
-  a[class*=button] {
-    font-size: .9rem;
-    text-decoration: none;
-    padding: 2% 3%;
-    border-radius: 50px;
-    margin: 0 2% 5% 0;
-    display: inline-flex;
-    align-items: center;
-  }
-
-  a[class *='refresh_button'] {
-    font-size: .5rem;
-    background-color: rgb(255, 255, 255);
-    color: black;
-  }
-
-  .col {
-    width: 100%;
-  }
-
-  body {
-    background: black;
-  }
-
- 
-  .box{
-    font-size: .5rem;
-  }
-
-  .header {
-    font-size: 1rem;
-  }
-
-  
 
 }

@@ -85,8 +85,6 @@
     color: var(--black);
   }
   
-  
-  
   .row {
     display: flex;
     height: fit-content;
@@ -140,7 +138,6 @@
    
   }
   
-  
   .used {
     outline: 2px solid rgb(255, 0, 0);
     outline-offset: -2px;
@@ -158,12 +155,7 @@
     align-items: center;
   }
   
-  a[class *='white_button'] {
-    font-size: 1.2rem;
-    background-color: rgb(255, 255, 255);
-    color: black;
-  }
-  
+ 
   a[class *='white_button'] {
     font-size: 1.2rem;
     background-color: rgb(255, 255, 255);
