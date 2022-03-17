@@ -8,8 +8,8 @@
 
   const BASE_URL = "https://www.thecocktaildb.com/api/json/v1/1/";
   var cocktailName;
-  var flag = 1;
-  
+  var flag = 0;
+
   window.addEventListener("load", init);
   // www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic
   //www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic
@@ -22,14 +22,17 @@
     for (const radioButton of radioButtons) {
       radioButton.addEventListener('change', showSelected);
     }
-    
+
     let btn_pick_me = document.getElementById("btn-random")
     btn_pick_me.addEventListener("click", btnHit);
 
-    
+    let checkBox = document.querySelector('input[name = checkbox]')
+    checkBox.addEventListener('change', swapDrinkType);
 
 
   }
+
+
 
 
   /**
@@ -41,7 +44,7 @@
     killChildren()
     let url = BASE_URL;
 
-    if(flag === 1){
+    if (flag === 1) {
       if (cocktailName) {
         url += "search.php?s=" + cocktailName
       } else {
@@ -49,13 +52,15 @@
       }
 
     }
-    else{
-      url = BASE_URL+ 'filter.php?a=Non_Alcoholic'
+    console.log("flag = ", flag);
+    if (flag === 0) {
+      url = BASE_URL + 'filter.php?a=Non_Alcoholic'
       console.log(url)
+      //strAlcoholic: "Non alcoholic"
     }
-   
 
-    
+
+
     getdata(url)
     //make a fetch request to https://www.thecocktaildb.com/api/json/v1/1/random.php
   }
@@ -69,34 +74,63 @@
     //Getting json for name and instructions
     const response = await fetch(url)
     const data = await response.json()
-    const {
+    //to get a random number for non alc drinks
+
+    if (flag == 0) {
+      // there are 58 non alc drinks in api and im lazy to look up how to make this not hard coded
+      var index = getRandomInt(0, 57)
+      var idnumber = data.drinks[index].idDrink
+      console.log("id number = ", idnumber)
+    } else {
+      index = 0
+    }
+
+
+    var {
       strDrink,
       strInstructions,
-      strDrinkThumb
-    } = data.drinks[0]
+      strDrinkThumb,
+      idDrink
+    } = data.drinks[index]
+    console.log("this should be the drink shown: ", strDrink)
+    //you have to look up the id number to get the ingedients and mesuremtns
 
-    console.log("GETTING DATA FOR", cocktailName, "...")
-    var parent = document.getElementById('child')
+    if (flag == 0) {
+      url = BASE_URL + "lookup.php?i=" + idDrink
+      const response = await fetch(url)
+      const data = await response.json()
+      console.log("drinks = ", data.drinks[0])
+      strInstructions = data.drinks[0].strInstructions
+      pass(data.drinks[0])
 
-    //make img
-    var img = document.createElement('img')
-    img.src = strDrinkThumb
-    parent.appendChild(img)
+    } else {
+      pass(data.drinks[0])
+    }
 
-    //make the Title
-    var child = document.createElement('h1')
-    child.innerHTML = strDrink
-    parent.appendChild(child)
 
-    //make the instructions
-    child = document.createElement('p')
-    child.innerHTML = strInstructions
-    parent.appendChild(child)
+    function pass(data) {
+      var parent = document.getElementById('child')
 
-    //make the ing list
-    makeList(data.drinks[0], parent)
+      //make img
+      var img = document.createElement('img')
+      img.src = strDrinkThumb
+      parent.appendChild(img)
+
+      //make the Title
+      var child = document.createElement('h1')
+      child.innerHTML = strDrink
+      parent.appendChild(child)
+
+      //make the instructions
+      child = document.createElement('p')
+      child.innerHTML = strInstructions
+      parent.appendChild(child)
+
+      //make the ing list
+      console.log("before list ", data.drinks)
+      makeList(data, parent)
+    }
   }
-
 
   function killChildren() {
     var child = document.querySelector('#child')
@@ -112,16 +146,15 @@
   function showSelected(e) {
     if (this.checked) {
       cocktailName = this.value
+    } else {
+      cocktailName = this.value
     }
-      else {
-        cocktailName = this.value
-      }
 
-      console.log(cocktailName)
-      makeRequest()
-      return
+    //console.log(cocktailName)
+    makeRequest()
+    return
 
-    
+
   }
 
   function btnHit() {
@@ -129,8 +162,20 @@
     makeRequest()
   }
 
+  function swapDrinkType() {
+    let Box = document.querySelector('input[name = checkbox]')
+    if (Box.checked) {
+      flag = 0;
+      // console.log(flag)
+    } else {
+      flag = 1;
+      // console.log(flag)
+
+    }
+    return
+  }
+
   function makeList(data, parent) {
-    console.log(data)
     var ul = document.createElement('ul')
     parent.appendChild(ul)
 
@@ -151,12 +196,15 @@
 
       mesurement = "strMeasure" + ++l
       ingredient = "strIngredient" + ++i
-
-
     }
-
-
   }
+
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+  }
+
   /* ------------------------------ Helper Functions below ------------------------------ */
 
   /**
