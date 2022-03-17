@@ -8,8 +8,11 @@
 
   const BASE_URL = "https://www.thecocktaildb.com/api/json/v1/1/";
   var cocktailName;
+  var flag = 1;
+  
   window.addEventListener("load", init);
-
+  // www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic
+  //www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic
   /**
    * TODO: What do we need to initialize?
    */
@@ -17,12 +20,17 @@
 
     const radioButtons = document.querySelectorAll('input[name="cocktail"]');
     for (const radioButton of radioButtons) {
-    radioButton.addEventListener('change', showSelected);
+      radioButton.addEventListener('change', showSelected);
     }
-    console.log(cocktailName)
+    
     let btn_pick_me = document.getElementById("btn-random")
     btn_pick_me.addEventListener("click", btnHit);
+
+    
+
+
   }
+
 
   /**
    * TODO: Fetch data from the CocktailDB api! Remember that this one returns
@@ -33,11 +41,21 @@
     killChildren()
     let url = BASE_URL;
 
-    if (cocktailName) {
-      url += "search.php?s=" + cocktailName
-    } else {
-      url += "random.php"
+    if(flag === 1){
+      if (cocktailName) {
+        url += "search.php?s=" + cocktailName
+      } else {
+        url += "random.php"
+      }
+
     }
+    else{
+      url = BASE_URL+ 'filter.php?a=Non_Alcoholic'
+      console.log(url)
+    }
+   
+
+    
     getdata(url)
     //make a fetch request to https://www.thecocktaildb.com/api/json/v1/1/random.php
   }
@@ -45,7 +63,7 @@
   /**
    * TODO: Implement any other functions you need
    */
-  
+
 
   async function getdata(url) {
     //Getting json for name and instructions
@@ -57,7 +75,7 @@
       strDrinkThumb
     } = data.drinks[0]
 
-    console.log("GETTING DATA FOR", cocktailName ,"...")
+    console.log("GETTING DATA FOR", cocktailName, "...")
     var parent = document.getElementById('child')
 
     //make img
@@ -76,7 +94,7 @@
     parent.appendChild(child)
 
     //make the ing list
-    makeList(data.drinks[0],parent)
+    makeList(data.drinks[0], parent)
   }
 
 
@@ -93,48 +111,51 @@
 
   function showSelected(e) {
     if (this.checked) {
-     cocktailName = this.value
-     console.log(cocktailName)
-     makeRequest()
-     return
-   
+      cocktailName = this.value
     }
+      else {
+        cocktailName = this.value
+      }
+
+      console.log(cocktailName)
+      makeRequest()
+      return
+
+    
   }
 
-  function btnHit(){
+  function btnHit() {
     cocktailName = undefined;
     makeRequest()
   }
 
-  function  makeList(data,parent){
+  function makeList(data, parent) {
     console.log(data)
     var ul = document.createElement('ul')
     parent.appendChild(ul)
-    
+
 
     let i = 1
     let l = 1
-    let ingredient = "strIngredient" +i
+    let ingredient = "strIngredient" + i
     let mesurement = "strMeasure" + l
-      while(data[ingredient]){
-        let child = document.createElement('li')
+    while (data[ingredient]) {
+      let child = document.createElement('li')
 
-        if(data[mesurement]){
-          child.innerHTML = data[ingredient] + " : " + data[mesurement]
-        }
-        else{
-          child.innerHTML = data[ingredient]
-        }
-        ul.appendChild(child)
-
-        mesurement = "strMeasure" + ++l
-        ingredient = "strIngredient" + ++i
-        
-
+      if (data[mesurement]) {
+        child.innerHTML = data[ingredient] + " : " + data[mesurement]
+      } else {
+        child.innerHTML = data[ingredient]
       }
-      
-    
-  
+      ul.appendChild(child)
+
+      mesurement = "strMeasure" + ++l
+      ingredient = "strIngredient" + ++i
+
+
+    }
+
+
   }
   /* ------------------------------ Helper Functions below ------------------------------ */
 
