@@ -8,10 +8,9 @@
 
   const BASE_URL = "https://www.thecocktaildb.com/api/json/v1/1/";
   var cocktailName;
-  var flag = 0;
+  var flag = 1
 
   window.addEventListener("load", init);
-  // www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic
   //www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic
   /**
    * TODO: What do we need to initialize?
@@ -28,52 +27,41 @@
 
     let checkBox = document.querySelector('input[name = checkbox]')
     checkBox.addEventListener('change', swapDrinkType);
-
-
   }
-
-
-
 
   /**
    * TODO: Fetch data from the CocktailDB api! Remember that this one returns
    * JSON, not plain text!
    */
   function makeRequest() {
-    // TODO
+    //kills all children nodes from html before adding any new DOM elements
     killChildren()
-    let url = BASE_URL;
 
+    let url = BASE_URL;
+    //flag == 1 means user wants an alc drink
     if (flag === 1) {
       if (cocktailName) {
         url += "search.php?s=" + cocktailName
       } else {
         url += "random.php"
       }
-
     }
-    console.log("flag = ", flag);
+    // flag == 0 means user does not want an alc drink
     if (flag === 0) {
       url = BASE_URL + 'filter.php?a=Non_Alcoholic'
-      console.log(url)
-      //strAlcoholic: "Non alcoholic"
     }
-
-
-
+    //get data uses url to fetch the json data and processes it there
     getdata(url)
-    //make a fetch request to https://www.thecocktaildb.com/api/json/v1/1/random.php
   }
 
+
   /**
-   * TODO: Implement any other functions you need
+   * get data uses fetch request to api to get information to display on html
    */
-
-
   async function getdata(url) {
-    //Getting json for name and instructions
     const response = await fetch(url)
     const data = await response.json()
+
     //to get a random number for non alc drinks
 
     if (flag == 0) {
@@ -82,10 +70,10 @@
       var idnumber = data.drinks[index].idDrink
       console.log("id number = ", idnumber)
     } else {
+      //otherwise use first element returned from fetch(url)
       index = 0
     }
-
-
+    //getting the data and storing into vars
     var {
       strDrink,
       strInstructions,
@@ -93,7 +81,7 @@
       idDrink
     } = data.drinks[index]
     console.log("this should be the drink shown: ", strDrink)
-    //you have to look up the id number to get the ingedients and mesuremtns
+    //you have to look up the id number to get the ingedients and mesuremtns for non alc drinks
 
     if (flag == 0) {
       url = BASE_URL + "lookup.php?i=" + idDrink
@@ -101,14 +89,16 @@
       const data = await response.json()
       console.log("drinks = ", data.drinks[0])
       strInstructions = data.drinks[0].strInstructions
-      pass(data.drinks[0])
+      createElements(data.drinks[0])
 
     } else {
-      pass(data.drinks[0])
+      createElements(data.drinks[0])
     }
 
-
-    function pass(data) {
+    /**
+     * this function will create all the elements to be appened to the html 
+     */
+    function createElements(data) {
       var parent = document.getElementById('child')
 
       //make img
@@ -126,12 +116,14 @@
       child.innerHTML = strInstructions
       parent.appendChild(child)
 
-      //make the ing list
-      console.log("before list ", data.drinks)
+      //make the ing/mesurement list
       makeList(data, parent)
     }
   }
 
+  /**
+   *  killChildren(), kills the children from the html before adding new DOM elemetns
+   */
   function killChildren() {
     var child = document.querySelector('#child')
     child.remove()
@@ -143,6 +135,9 @@
     parent.append(remake)
   }
 
+  /**
+   *  this shows what radio button is currently selected then makes a request for that name
+   */
   function showSelected(e) {
     if (this.checked) {
       cocktailName = this.value
@@ -151,34 +146,40 @@
     }
 
     //console.log(cocktailName)
+    flag = 1
     makeRequest()
     return
 
 
   }
-
+  /**
+   *  this says if random button hit, make name undefined so url gets to be (url += "random.php")
+   */
   function btnHit() {
     cocktailName = undefined;
     makeRequest()
   }
-
+  /**
+   *  this swaps from alc dinks to non-alc drinks, 
+   */
   function swapDrinkType() {
     let Box = document.querySelector('input[name = checkbox]')
     if (Box.checked) {
+      //non-alc
       flag = 0;
-      // console.log(flag)
-    } else {
-      flag = 1;
-      // console.log(flag)
 
+    } else {
+      //alc
+      flag = 1;
     }
     return
   }
-
+  /**
+   * this makes the ul and list items for ingerients and mesuremnts
+   */
   function makeList(data, parent) {
     var ul = document.createElement('ul')
     parent.appendChild(ul)
-
 
     let i = 1
     let l = 1
@@ -198,7 +199,9 @@
       ingredient = "strIngredient" + ++i
     }
   }
-
+  /**
+   * this gives a random int for non alc drinks
+   */
   function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
