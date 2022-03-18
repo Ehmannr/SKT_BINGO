@@ -1,6 +1,7 @@
 /**
  * CS 310
- * Cocktails (Starter Template)
+ * Ryan Ehmann
+ * this is the backend for a website that goes to an api and gets Drink name and ingredients
  */
 "use strict";
 (function () {
@@ -36,7 +37,6 @@
   function makeRequest() {
     //kills all children nodes from html before adding any new DOM elements
     killChildren()
-
     let url = BASE_URL;
     //flag == 1 means user wants an alc drink
     if (flag === 1) {
@@ -63,16 +63,17 @@
     const data = await response.json()
 
     //to get a random number for non alc drinks
-
     if (flag == 0) {
       // there are 58 non alc drinks in api and im lazy to look up how to make this not hard coded
       var index = getRandomInt(0, 57)
       var idnumber = data.drinks[index].idDrink
       console.log("id number = ", idnumber)
-    } else {
+    } 
+    else {
       //otherwise use first element returned from fetch(url)
       index = 0
     }
+
     //getting the data and storing into vars
     var {
       strDrink,
@@ -81,8 +82,8 @@
       idDrink
     } = data.drinks[index]
     console.log("this should be the drink shown: ", strDrink)
-    //you have to look up the id number to get the ingedients and mesuremtns for non alc drinks
 
+    //you have to look up the id number to get the ingedients and mesuremtns for non alc drinks since just using the non-alc filter does not have that information
     if (flag == 0) {
       url = BASE_URL + "lookup.php?i=" + idDrink
       const response = await fetch(url)
@@ -90,13 +91,14 @@
       console.log("drinks = ", data.drinks[0])
       strInstructions = data.drinks[0].strInstructions
       createElements(data.drinks[0])
-
-    } else {
+    } 
+    else {
       createElements(data.drinks[0])
     }
 
     /**
      * this function will create all the elements to be appened to the html 
+     * @param array data - the data from the fetch request
      */
     function createElements(data) {
       var parent = document.getElementById('child')
@@ -109,6 +111,11 @@
       //make the Title
       var child = document.createElement('h1')
       child.innerHTML = strDrink
+      parent.appendChild(child)
+
+      //make h3
+      child = document.createElement('h3')
+      child.innerHTML = "Ingredients"
       parent.appendChild(child)
 
       //make the instructions
@@ -161,6 +168,7 @@
   }
   /**
    *  this swaps from alc dinks to non-alc drinks, 
+   * 
    */
   function swapDrinkType() {
     let Box = document.querySelector('input[name = checkbox]')
@@ -176,7 +184,10 @@
   }
   /**
    * this makes the ul and list items for ingerients and mesuremnts
+   * @param data and @param parent  - given the array and parent DOM element
+   * 
    */
+
   function makeList(data, parent) {
     var ul = document.createElement('ul')
     parent.appendChild(ul)
@@ -200,7 +211,9 @@
     }
   }
   /**
-   * this gives a random int for non alc drinks
+   * random number generator
+   * @param min and @param max  - min and max numbers to choose between
+   * @return int - give the random number back 
    */
   function getRandomInt(min, max) {
     min = Math.ceil(min);
